@@ -53,7 +53,6 @@ app.get('/summoner', async (req, res) => {
 
 app.get('/ranked-stats', async (req, res) => {
     const rankedStatsQuery = '/lol/league/v4/entries/by-summoner/';
-    console.log(ENCRYPTED_ACCOUNT_ID);
     const riotResponse = await requestRiotApi(rankedStatsQuery, ENCRYPTED_SUMMONER_ID);
     res.json(riotResponse);
 });
